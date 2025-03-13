@@ -54,12 +54,16 @@ for item in student_scores:
 
     student_avg.clear()
 
+c = 0
+
 for i in range(tests):
     total_scoring = 0
 
     for a in range(len(names)):
-        total_scoring += student_scores[i][a+1]
+        b = student_scores[a][1+c]
+        total_scoring += b
     
     avg = total_scoring/len(names)
+    c += 1
 
     print(f"Average score for test {i+1}: {avg}")
